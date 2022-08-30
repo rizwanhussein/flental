@@ -21,17 +21,38 @@
 # users.save
 
 # Puts name: "Richmond" name: "Kingston" name: "Shepherd Bush")
+puts "Cleaning the database"
 Flat.destroy_all
 User.destroy_all
 
-user = User.create!(email: "admin@gmail.com", password: "1234567")
+puts "Creating flats"
 
-flats = Flat.create(name: "Hoxton", user_id: user.id)
+5.times do
+  flat = Flat.create(
+    name: Faker::Beer.brand,
+    street_address: Faker::Address.street_address,
+    city: Faker::Address.city,
+    postcode: Faker::Address.postcode,
+    rating: rand(1..5)
+  )
+  puts "flat name #{flat.name} on #{flat.street_address} and a rating of #{flat.rating} has been created"
+end
 
-flats = Flat.create(name: "Ealing", user_id: user.id)
+# 3.times do
+#   user = User.create (
+#   email: Faker::Internet.email,
+#   password: Faker::Name.unique.name
+#   )
+# end
 
-flats = Flat.create(name: "Kingston", user_id: user.id)
+# user = User.create!(email: "admin@gmail.com", password: "1234567")
 
-flats = Flat.create(name: "Shepherd Bush", user_id: user.id)
+# flats = Flat.create(name: "Hoxton", user_id: user.id)
 
-flats = Flat.create(name: "Shoreditch", user_id: user.id)
+# flats = Flat.create(name: "Ealing", user_id: user.id)
+
+# flats = Flat.create(name: "Kingston", user_id: user.id)
+
+# flats = Flat.create(name: "Shepherd Bush", user_id: user.id)
+
+# flats = Flat.create(name: "Shoreditch", user_id: user.id)
