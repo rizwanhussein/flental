@@ -1,4 +1,5 @@
 class FlatsController < ApplicationController
+  #  skip_before_action :authenticate_user!, only: :home
   def index
     @flats = Flat.all
   end
