@@ -13,11 +13,10 @@
 
 
 <%= form_with url: "/search", method: :get do |form| %>
-  <%= form.label :query, "Name:" %>
+  <%= form.label :query, "Name:"  %>
   <%= form.text_field :query %>
   <%= form.submit "Add" %>
 <% end %>
-
 
 
 <%= form_with url: "/search", method: :get do |form| %>
@@ -25,5 +24,6 @@
     <%= form.text_field :query %>
     <%= form.submit "Add" %>
   <% end %>
-
-
+    <div>
+    <%= link_to "Homepage", flats_path  %>
+      </div>
