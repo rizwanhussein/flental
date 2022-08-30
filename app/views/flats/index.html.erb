@@ -1,31 +1,30 @@
-<%# This is the banner outside of the  %>
+<%# This is the banner outside of the container %>
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
   <div class="container">
-    <h1>Flental brings flats to the perfect guests!</h1>
-    <p>Make some 🤑 money by renting your spaces to like-minded people</p>
+    <h1 id="title">F L E N T A L</h1>
+    <p>Flental brings the perfect flat host to like-minded guests</p>
     <a class="btn btn-flat" href="#">Host now</a>
   </div>
 </div>
 
 <div class="container">
-
   <div class="cards">
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-      Flat 1
-    </div>
+    <% @flats.each do |flat| %>
+    <div class="card-trip">
 
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
-      Flat 2
-    </div>
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= flat.name %></h2>
+          <p>Address here!</p>
+          <p>Beautiful flat in <%= flat.name %></p>
+        </div>
+        <h2 class="card-trip-pricing">£100</h2>
+      </div>
 
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-      Flat 3
     </div>
+    <% end %>
   </div>
-
-  <% @flats.each do |flat| %>
-    <%= link_to flat.name, flat_path(flat) %>
-  <% end %>
 </div>
 
 <%= link_to " Host Your Flat On Flental", new_flat_path  %>
