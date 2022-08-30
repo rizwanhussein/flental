@@ -13,14 +13,12 @@ class FlatsController < ApplicationController
       redirect_to flat_path(@flat)
     else
       render :new, status: :unprocessable_entity
-     end
+    end
   end
 
   def show
     @flat = Flat.find(params[:id])
   end
-
-
 
 private
 
