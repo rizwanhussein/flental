@@ -1,6 +1,14 @@
 <h1>Flats#show</h1>
 <div>
 
+
 <p>Find me in app/views/flats/show.html.erb</p>
 <%= @flat.name %>
+<%
+=begin%>
+ <%= @flat.description %>
+<% cl_image_tag @flat.photo.key %>
+<%
+=end%>
+
 <%= link_to "back to index", flats_path %>

@@ -2,7 +2,7 @@ class FlatsController < ApplicationController
   def index
     @flats = Flat.all
   end
- def def new
+ def new
   @flat = Flat.new
  end
 
@@ -12,22 +12,22 @@ class FlatsController < ApplicationController
       redirect_to flat_path(@flat)
     else
       render :new, status: :unprocessable_entity
+    end
   end
 
   def show
     @flat = Flat.find(params[:id])
   end
 
-end
 
-private
+  private
 
-def set_flat
-  @flat = Flat.find(params[:flat_id])
-end
+  def set_flat
+    @flat = Flat.find(params[:flat_id])
+  end
 
-def flat_params
-  params.require(:flat).permit(:name)
-end
+  def flat_params
+    params.require(:flat).permit(:name)
+  end
 
 end
