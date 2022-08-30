@@ -28,10 +28,10 @@ user = User.create!(email: "admin@gmail.com", password: "1234567")
 
 flats = Flat.create(name: "Hoxton", user_id: user.id)
 
-flats = Flat.create(name: "Ealing", user_id: user.id )
+flats = Flat.create(name: "Ealing", user_id: user.id)
 
-flats = Flat.create(name: "Kingston", user_id: user.id )
+flats = Flat.create(name: "Kingston", user_id: user.id)
 
-flats = Flat.create(name: "Shepherd Bush", user_id: user.id )
+flats = Flat.create(name: "Shepherd Bush", user_id: user.id)
 
-flats = Flat.create(name: "Shoreditch", user_id: user.id )
+flats = Flat.create(name: "Shoreditch", user_id: user.id)
