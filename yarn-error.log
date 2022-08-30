@@ -1,8 +1,8 @@
 Arguments: 
-  /Users/rizwanhusseingulamhussein/.nvm/versions/node/v16.15.1/bin/node /Users/rizwanhusseingulamhussein/.nvm/versions/node/v16.15.1/bin/yarn add popperjs
+  /Users/rizwanhusseingulamhussein/.nvm/versions/node/v16.15.1/bin/node /Users/rizwanhusseingulamhussein/.nvm/versions/node/v16.15.1/bin/yarn build --watch
 
 PATH: 
-  ./bin:./node_modules/.bin:/Users/rizwanhusseingulamhussein/.nvm/versions/node/v16.15.1/bin:/Users/rizwanhusseingulamhussein/.rbenv/shims:/Users/rizwanhusseingulamhussein/.rbenv/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/rizwanhusseingulamhussein/.pyenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/local/sbin
+  /Users/rizwanhusseingulamhussein/.rbenv/versions/3.1.2/bin:/opt/homebrew/Cellar/rbenv/1.2.0/libexec:./bin:./node_modules/.bin:/Users/rizwanhusseingulamhussein/.nvm/versions/node/v16.15.1/bin:/Users/rizwanhusseingulamhussein/.rbenv/shims:/Users/rizwanhusseingulamhussein/.rbenv/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/rizwanhusseingulamhussein/.pyenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands:./bin:./node_modules/.bin:/Users/rizwanhusseingulamhussein/.nvm/versions/node/v16.15.1/bin:/Users/rizwanhusseingulamhussein/.rbenv/shims:/Users/rizwanhusseingulamhussein/.rbenv/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/rizwanhusseingulamhussein/.pyenv/bin:/usr/local/sbin:/usr/local/sbin
 
 Yarn version: 
   1.22.19
@@ -14,27 +14,27 @@ Platform:
   darwin arm64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/popperjs: Not found
-      at Request.params.callback [as _callback] (/Users/rizwanhusseingulamhussein/.nvm/versions/node/v16.15.1/lib/node_modules/yarn/lib/cli.js:66145:18)
-      at Request.self.callback (/Users/rizwanhusseingulamhussein/.nvm/versions/node/v16.15.1/lib/node_modules/yarn/lib/cli.js:140890:22)
-      at Request.emit (node:events:527:28)
-      at Request.<anonymous> (/Users/rizwanhusseingulamhussein/.nvm/versions/node/v16.15.1/lib/node_modules/yarn/lib/cli.js:141862:10)
-      at Request.emit (node:events:527:28)
-      at IncomingMessage.<anonymous> (/Users/rizwanhusseingulamhussein/.nvm/versions/node/v16.15.1/lib/node_modules/yarn/lib/cli.js:141784:12)
-      at Object.onceWrapper (node:events:641:28)
-      at IncomingMessage.emit (node:events:539:35)
-      at endReadableNT (node:internal/streams/readable:1345:12)
-      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+  TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received type boolean (true)
+      at new NodeError (node:internal/errors:372:5)
+      at validateString (node:internal/validators:120:11)
+      at Object.isAbsolute (node:path:1157:5)
+      at module.exports.exports.default (/Users/rizwanhusseingulamhussein/.nvm/versions/node/v16.15.1/lib/node_modules/yarn/lib/cli.js:97087:16)
+      at /Users/rizwanhusseingulamhussein/.nvm/versions/node/v16.15.1/lib/node_modules/yarn/lib/cli.js:51330:63
+      at Generator.next (<anonymous>)
+      at step (/Users/rizwanhusseingulamhussein/.nvm/versions/node/v16.15.1/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /Users/rizwanhusseingulamhussein/.nvm/versions/node/v16.15.1/lib/node_modules/yarn/lib/cli.js:321:13
 
 npm manifest: 
   {
     "dependencies": {
+      "private": true,
       "@popperjs/core": "^2.11.6",
       "bootstrap": "^5.2.0",
       "webpack": "^5.74.0",
       "webpack-cli": "^4.10.0"
     },
     "scripts": {
+      "private": true,
       "build": "webpack --config webpack.config.js"
     }
   }
@@ -370,9 +370,9 @@ Lockfile:
       which "^2.0.1"
   
   electron-to-chromium@^1.4.202:
-    version "1.4.234"
-    resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.234.tgz#ff8fb29c2edac74ef3935ca03a2ecbe62ede400b"
-    integrity sha512-VqlJ4Ihd9F7eQIfwEtf7C0eZZDl6bQtpez8vx8VHN9iCZEzePZjr7n9OGFHSav4WN9zfLa2CFLowj0siBoc0hQ==
+    version "1.4.235"
+    resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.235.tgz#48ac33c4e869a1795013788099470061463d1890"
+    integrity sha512-eNU2SmVZYTzYVA5aAWmhAJbdVil5/8H5nMq6kGD0Yxd4k2uKIuT8YmS46I0QXY7iOoPPcb6jjem9/2xyuH5+XQ==
   
   enhanced-resolve@^5.10.0:
     version "5.10.0"
