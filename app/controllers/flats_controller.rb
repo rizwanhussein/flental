@@ -21,6 +21,12 @@ class FlatsController < ApplicationController
     @flat = Flat.find(params[:id])
   end
 
+  def another_action
+  end
+
+  def action
+  end
+
 private
 
   def set_flat
@@ -30,4 +36,5 @@ private
   def flat_params
     params.require(:flat).permit(:name)
   end
+
 end
