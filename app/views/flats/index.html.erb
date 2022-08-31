@@ -2,8 +2,8 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
   <div class="container">
     <h1 id="title">F L E N T A L</h1>
-    <p>Flental brings the perfect flat host to like-minded guests</p>
-    <a class="btn btn-flat" href="#">Host now</a>
+    <p>Bringing together trusted hosts and hostees</p>
+    <a class="btn btn-flat" <%= link_to "Become a host!", new_flat_path%>>
   </div>
 </div>
 
@@ -26,5 +26,3 @@
     <% end %>
   </div>
 </div>
-
-<%= link_to " Host Your Flat On Flental", new_flat_path  %>

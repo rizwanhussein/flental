@@ -6,3 +6,8 @@
 <%= @flat.name %>
 
 <%= link_to "back to index", root_path %>
+
+<div>
+<%= cl_image_tag @flat.photo.key, height: 300, width: 400, crop: :fill %>
+
+</div>

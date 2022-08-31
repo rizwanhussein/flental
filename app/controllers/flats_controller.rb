@@ -23,7 +23,7 @@ class FlatsController < ApplicationController
   end
 
   def update
-      authorize @flat
+    authorize @flat
   end
 
   private
@@ -33,6 +33,6 @@ class FlatsController < ApplicationController
   end
 
   def flat_params
-    params.require(:flat).permit(:name, :street_address, :city)
+    params.require(:flat).permit(:name, :street_address, :city, :photo)
   end
 end
