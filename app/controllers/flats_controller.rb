@@ -29,7 +29,13 @@ class FlatsController < ApplicationController
   end
 
   def update
-      authorize @flat
+    authorize @flat
+  end
+
+  def destroy
+    @flat = Flat.find(params[:id])
+    @flat.destroy
+    redirect_to root_path
   end
 
   private
