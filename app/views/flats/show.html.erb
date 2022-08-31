@@ -8,6 +8,7 @@
     </div>
   </div>
 
+
   <h1><%= @flat.name %></h1>
 
 
@@ -27,5 +28,9 @@
   <div>
     <a class="btn btn-flat" href="#">Book now</a>
   </div>
+<%= link_to "back to index", root_path %>
+
+<div>
+<%= cl_image_tag @flat.photo.key, height: 300, width: 400, crop: :fill %>
 
 </div>

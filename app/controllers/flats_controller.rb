@@ -29,13 +29,13 @@ class FlatsController < ApplicationController
   end
 
   def update
-    authorize @flat
   end
 
   def destroy
     @flat = Flat.find(params[:id])
     @flat.destroy
     redirect_to root_path
+
   end
 
   private
@@ -45,6 +45,6 @@ class FlatsController < ApplicationController
   end
 
   def flat_params
-    params.require(:flat).permit(:name, :street_address, :city)
+    params.require(:flat).permit(:name, :street_address, :city, :photo)
   end
 end

@@ -1,26 +1,26 @@
 
-<h1> Flental </h1>
-<h3> Renting Made Easy</h3>
-<p> Creating a hosting </p>
-<p> Flental rules for putting your flat on Flental </p>
-<ul>
-  <li> Lorem Ipsum is simply dummy text of the printing </li>
+<div class="container">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+    <div class="container">
+      <h1 id="title">F L E N T A L</h1>
+      <p>London flat rental made easy</p>
+    </div>
+  </div>
 
-     <li> Lorem Ipsum is simply dummy text of the printing </li>
+  <div class="form">
+    <%= simple_form_for @flat do |f| %>
 
-  <li> Lorem Ipsum is simply dummy text of the printing </li>
-  <li> Lorem Ipsum is simply dummy text of the printing </li>
-  <li> Lorem Ipsum is simply dummy text of the printing </li>
-</ul>
+      <h3>Add your title</h3>
+      <%= f.input_field :name, placeholder: "The fantastic flat" %>
 
 
-<%= simple_form_for @flat do |f| %>
-     Name
-     <%= f.input_field :name %>
-      <br> Street Address
-      <%= f.input_field :street_address %>
-      <br> City
-      <%= f.input_field :city %>
-    <br>
-     <%= f.button :submit  %>
-<% end %>
+      <h3>Where is your flat?</h3>
+      <%= f.input_field :street_address, placeholder: "Croydon, CR0 2LG" %>
+
+      <h3>Add your unfiltered flat selfies 🤳</h3>
+      <%= f.input :photo, as: :file %>
+
+      <%= f.button :submit %>
+    <% end %>
+  </div>
+</div>
