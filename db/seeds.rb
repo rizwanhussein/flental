@@ -34,6 +34,7 @@ flats = Flat.create(name: "Cool flat🏠",
   street_address: "Ealing",
   description: "My Ealing Earl",
   capacity: 4
+  # photo: cl_image_tag("", width: 400)
 )
 
 flats = Flat.create(name: "Expensive flat 🤑",
