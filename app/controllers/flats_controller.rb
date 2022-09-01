@@ -28,6 +28,14 @@ class FlatsController < ApplicationController
     @flat = Flat.find(params[:id])
   end
 
+
+  def another_action
+  end
+
+  def action
+  end
+
+
   def update
   end
 
@@ -35,10 +43,10 @@ class FlatsController < ApplicationController
     @flat = Flat.find(params[:id])
     @flat.destroy
     redirect_to root_path
-
   end
 
   private
+
 
   def set_flat
     @flat = Flat.find(params[:id])
@@ -47,4 +55,5 @@ class FlatsController < ApplicationController
   def flat_params
     params.require(:flat).permit(:name, :street_address, :city, :photo)
   end
+
 end
