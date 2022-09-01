@@ -1,5 +1,9 @@
 class FlatsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
+
+  def home
+  end
+
   def index
     @flats = Flat.all
     @markers = @flats.geocoded.map do |flat|
@@ -28,6 +32,14 @@ class FlatsController < ApplicationController
     @flat = Flat.find(params[:id])
   end
 
+
+  def another_action
+  end
+
+  def action
+  end
+
+
   def update
   end
 
@@ -39,6 +51,7 @@ class FlatsController < ApplicationController
 
   private
 
+
   def set_flat
     @flat = Flat.find(params[:id])
   end
@@ -46,4 +59,5 @@ class FlatsController < ApplicationController
   def flat_params
     params.require(:flat).permit(:name, :street_address, :description, :capacity, :photo)
   end
+
 end
