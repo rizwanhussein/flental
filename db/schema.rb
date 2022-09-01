@@ -11,6 +11,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2022_09_01_114551) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -64,6 +65,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_01_114551) do
     t.integer "rating"
     t.float "latitude"
     t.float "longitude"
+    t.integer "capacity"
+    t.string "description"
     t.index ["user_id"], name: "index_flats_on_user_id"
   end
 

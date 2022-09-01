@@ -1,12 +1,5 @@
 <div class="container">
 
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1661796428215-04fc2830aae6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1588&q=80.jgp);">
-    <div class="container">
-      <h1 id="title">F L E N T A L</h1>
-      <p></p>
-
-    </div>
-  </div>
 
 
   <h1><%= @flat.name %></h1>
@@ -28,9 +21,9 @@
   <div>
     <a class="btn btn-flat" href="#">Book now</a>
   </div>
-<%= link_to "back to index", root_path %>
+  <%= link_to "back to index", root_path %>
 
-<div>
-<%= cl_image_tag @flat.photo.key, height: 300, width: 400, crop: :fill %>
+  <div>
+  <%= cl_image_tag @flat.photo.key, height: 300, width: 400, crop: :fill %>
 
 </div>

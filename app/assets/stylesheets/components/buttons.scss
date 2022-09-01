@@ -1,0 +1,24 @@
+// button for the banner
+// font colours
+// dark purple 420039
+// lighter purp 932F6D
+// orchid E07BE0
+//
+
+
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 7px;
+  background: #932F6D;
+  transition: 0.3s ease;
+  margin: auto;
+
+}
+
+.btn-flat:hover {
+  background: #932F6D;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color:white;
+}
