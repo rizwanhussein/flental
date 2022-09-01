@@ -5,7 +5,12 @@ class FlatsController < ApplicationController
   end
 
   def index
-    @flats = Flat.all
+    # @flats = Flat.all
+    if params[:query].present?
+      @flats = Flat.search_by_street_address_and_description(params[:query])
+    else
+      @flats = Flat.all
+    end
     @markers = @flats.geocoded.map do |flat|
       {
         lat: flat.latitude,
