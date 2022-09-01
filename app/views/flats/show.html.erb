@@ -12,10 +12,17 @@
    <%# <%= link_to 'Delete', flat_path(@flat), method: :delete %>
   </div>
   <div>
+
      <%= link_to "Book Now", new_flat_booking_path(@flat) %>
   </div>
 
+
   <%= link_to "back to index", root_path %>
+  </div>
+
+    <div>
+  <%= link_to "edit booking", edit_flat_path %>
+  </div>
 
   <div>
   <%= cl_image_tag @flat.photo.key, height: 300, width: 400, crop: :fill %>

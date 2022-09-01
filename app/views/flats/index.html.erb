@@ -1,30 +1,47 @@
+<%# SEARCH BAR %>
+<%# http request is going to the flats path so the info will go to
+the page we are already on %>
+<%= form_with url: flats_path, method: :get, class: "d-flex my-3" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a flat"
+  %>
+  <%= submit_tag "Search", class: "btn-flat" %>
+<% end %>
+
 <%# This is the banner outside of the container %>
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1661796428215-04fc2830aae6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1588&q=80.jgp);">
-  <div class="container">
-    <h1 id="title">F L E N T A L</h1>
-    <p>Bringing together trusted hosts and hostees</p>
-    <a class="btn-flat" <%= link_to "Become a host!", new_flat_path%>>
-  </div>
+  <h1 id="title">F L E N T A L</h1>
+  <p>Bringing together trusted hosts and hostees</p>
+  <a class="btn-flat" <%= link_to "Become a host!", new_flat_path%>>
 </div>
+
+
+
 
 <div class="container">
   <div class="cards">
     <% @flats.each do |flat| %>
       <%= link_to flat_path(flat) do %>
-    <div class="card-trip">
+    <div class="card">
 
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-      <div class="card-trip-infos">
+    <%= cl_image_tag(flat.photo.key, width: 400, height: 300, crop: :fill) %>
+      <div class="card-infos">
         <div>
           <h2><%= flat.name %></h2>
           <p><%= flat.street_address %></p>
-          <p>Beautiful flat in <%= flat.name %></p>
+          <p><%= flat.description %></p>
         </div>
-        <h2 class="card-trip-pricing">£100</h2>
+        <h2 class="card-pricing">£100</h2>
       </div>
-
-    </div>
-    <% end %>
-    <% end %>
   </div>
+  <% end %>
+  <% end %>
+</div>
+
+<div style="width: 100%; height: 600px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>

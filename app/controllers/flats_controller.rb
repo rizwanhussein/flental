@@ -1,11 +1,17 @@
 class FlatsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
+
   def home
   end
 
   def index
-    @flats = Flat.all
+    # @flats = Flat.all
+    if params[:query].present?
+      @flats = Flat.search_by_street_address_and_description(params[:query])
+    else
+      @flats = Flat.all
+    end
     @markers = @flats.geocoded.map do |flat|
       {
         lat: flat.latitude,
@@ -33,21 +39,26 @@ class FlatsController < ApplicationController
     @booking = Booking.new
   end
 
-
-  def another_action
+  def edit
+    @flat = Flat.find(params[:id])
   end
-
-  def action
-  end
-
 
   def update
+    flat = Flat.find(params[:id])
+    flat.update(strong_params)
+    redirect_to flat_path(flat)
   end
 
   def destroy
     @flat = Flat.find(params[:id])
     @flat.destroy
     redirect_to root_path
+  end
+
+  def another_action
+  end
+
+  def action
   end
 
   private
