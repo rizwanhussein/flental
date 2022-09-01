@@ -25,19 +25,40 @@
 Flat.destroy_all
 User.destroy_all
 
-
 user = User.create!(email: "admin@gmail.com", password: "1234567")
 
 # flats = Flat.create(name: "Hoxton", street_address: "22 arundle avenue", rating: "4", user_id: user.id)
 
-flats = Flat.create(name: "Ealing", street_address: " Leopold Rd London United Kingdom", user_id: user.id)
 
-flats = Flat.create(name: "Kingston" ,street_address: "Wingfield Rd, Kingston upon Thames  United Kingdom", user_id: user.id)
+flats = Flat.create(name: "Cool flat🏠",
+  user_id: user.id,
+  street_address: "Ealing",
+  description: "My Ealing Earl",
+  capacity: 4
+  # photo: cl_image_tag("", width: 400)
+)
 
-flats = Flat.create(name: "Shepherd Bush", street_address: "Shepherds Bush Rd London United Kingdom", user_id: user.id)
+flats = Flat.create(name: "Expensive flat 🤑",
+  user_id: user.id,
+  street_address: "Kingston",
+  description: "My Kingston commode",
+  capacity: 1
+)
 
-flats = Flat.create(name: "Shoreditch", street_address: "Shoreditch High St London United Kingdom", user_id: user.id)
+flats = Flat.create(name: "Legends only 🤑",
+  user_id: user.id,
+  street_address: "Shepherd Bush",
+  description: "My Shepherd Bush tucker trial",
+  capacity: 10
+)
 
+
+flats = Flat.create(name: "My Shoreditch shwanky flat 👍",
+  user_id: user.id,
+  street_address: "Shoreditch",
+  description: "so edgy",
+  capacity: 8
+)
 
 # puts "Creating flats"
 
