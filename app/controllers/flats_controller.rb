@@ -1,5 +1,5 @@
 class FlatsController < ApplicationController
-  #  skip_before_action :authenticate_user!, only: :home
+  skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     @flats = Flat.all
     @markers = @flats.geocoded.map do |flat|
@@ -17,7 +17,7 @@ class FlatsController < ApplicationController
   def create
     @flat = Flat.new(flat_params)
     @flat.user = current_user
-    if @flat.save
+    if @flat.save!
       redirect_to flat_path(@flat)
     else
       render :new, status: :unprocessable_entity
@@ -44,6 +44,6 @@ class FlatsController < ApplicationController
   end
 
   def flat_params
-    params.require(:flat).permit(:name, :street_address, :city, :photo)
+    params.require(:flat).permit(:name, :street_address, :description, :capacity, :photo)
   end
 end
