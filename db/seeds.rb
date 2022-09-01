@@ -29,6 +29,7 @@ user = User.create!(email: "admin@gmail.com", password: "1234567")
 
 # flats = Flat.create(name: "Hoxton", street_address: "22 arundle avenue", rating: "4", user_id: user.id)
 
+
 flats = Flat.create(name: "Cool flat🏠",
   user_id: user.id,
   street_address: "Ealing",
@@ -50,6 +51,7 @@ flats = Flat.create(name: "Legends only 🤑",
   description: "My Shepherd Bush tucker trial",
   capacity: 10
 )
+
 
 flats = Flat.create(name: "My Shoreditch shwanky flat 👍",
   user_id: user.id,
