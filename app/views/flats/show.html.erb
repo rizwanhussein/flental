@@ -1,12 +1,5 @@
 <div class="container">
-
-
-
-  <h1><%= @flat.name %></h1>
-
-
-
-  <%= @flat.name %>
+<h1><%= @flat.name %> </h1>
   <div>
     <%= link_to "back to index", root_path %>
   </div>
@@ -19,11 +12,13 @@
    <%# <%= link_to 'Delete', flat_path(@flat), method: :delete %>
   </div>
   <div>
-    <a class="btn btn-flat" href="#">Book now</a>
+     <%= link_to "Book Now", new_flat_booking_path(@flat) %>
   </div>
+
   <%= link_to "back to index", root_path %>
 
   <div>
   <%= cl_image_tag @flat.photo.key, height: 300, width: 400, crop: :fill %>
+
 
 </div>
