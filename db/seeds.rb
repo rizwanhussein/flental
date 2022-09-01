@@ -30,13 +30,13 @@ user = User.create!(email: "admin@gmail.com", password: "1234567")
 
 # flats = Flat.create(name: "Hoxton", street_address: "22 arundle avenue", rating: "4", user_id: user.id)
 
-flats = Flat.create(name: "Ealing", user_id: user.id)
+flats = Flat.create(name: "Ealing", street_address: " Leopold Rd London United Kingdom", user_id: user.id)
 
-flats = Flat.create(name: "Kingston", user_id: user.id)
+flats = Flat.create(name: "Kingston" ,street_address: "Wingfield Rd, Kingston upon Thames  United Kingdom", user_id: user.id)
 
-flats = Flat.create(name: "Shepherd Bush", user_id: user.id)
+flats = Flat.create(name: "Shepherd Bush", street_address: "Shepherds Bush Rd London United Kingdom", user_id: user.id)
 
-flats = Flat.create(name: "Shoreditch", user_id: user.id)
+flats = Flat.create(name: "Shoreditch", street_address: "Shoreditch High St London United Kingdom", user_id: user.id)
 
 
 # puts "Creating flats"
