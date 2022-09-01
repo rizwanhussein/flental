@@ -12,5 +12,13 @@ class Flat < ApplicationRecord
   after_validation :geocode, if:
   :will_save_change_to_street_address?
 
+  # dont want to delete the below in case it breaks something but we may not need it pls check in merge
   belongs_to :user
+
+  include PgSearch::Model
+  pg_search_scope :search_by_street_address_and_description,
+    against: [ :street_address, :description ],
+    using: {
+      tsearch: { prefix: true } # <-- now `superman batm` will return something!
+    }
 end
