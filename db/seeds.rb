@@ -45,7 +45,7 @@ flats.save!
 
 flats = Flat.create(name: "Expensive flat 🤑",
   user_id: user.id,
-  street_address: "Kingston",
+  street_address: "Kingston Upon Thames",
   description: "My Kingston commode",
   capacity: 1
 )
@@ -77,7 +77,7 @@ flats = Flat.create(name: "My Shoreditch shwanky flat 👍",
 
 #Shoreditch Photos
 file = URI.open("https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80")
-flats.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+flats.photo.attach(io: file, filename: "nes.png", content_type: "image/png" )
 flats.save!
 
 # puts "Creating flats"
