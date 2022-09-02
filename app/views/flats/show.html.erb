@@ -5,7 +5,7 @@ YOU CAN EDIT DELETE BOOK OR GO BACK  %>
   <h1><%= @flat.name %></h1>
 
     <div class="flex-box">
-      <div class="row">
+      <div class="row image">
       <%= cl_image_tag @flat.photo.key, height: 300, width: 400, crop: :fill %>
       </div>
 
@@ -13,19 +13,16 @@ YOU CAN EDIT DELETE BOOK OR GO BACK  %>
         <h3><%= @flat.description %></h3>
       </div>
       <div class="row">
-        <div class="col-3 btn-flat">
-          <%= link_to "Book Now", new_flat_booking_path(@flat) %>
+        <div class="col-4 btn btn-flat">
+          <%= link_to "Book Now", new_flat_booking_path(@flat)  %>
         </div>
-        <div class="col-3 btn btn-light">
-          <%= link_to "back to index", root_path %>
-        </div>
-        <div class="col-3 btn btn-light">
+        <div class="col-4 btn btn-light">
           <%= simple_form_for @flat, method: :delete do |f| %>
-          <%= f.button :submit, 'Delete' %>
+          <%= f.button :submit, 'Delete', class: "btn-light" %>
           <% end %>
         </div>
-        <div class="col-3 btn btn-light">
-          <%= link_to "edit booking", edit_flat_path %>
+        <div class="col-4 btn btn-light">
+          <%= link_to "Edit", edit_flat_path, class: "btn btn-light" %>
         </div>
       </div>
     </div>
