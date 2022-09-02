@@ -31,10 +31,10 @@ user = User.create!(email: "admin@gmail.com", password: "1234567")
 # flats = Flat.create(name: "Hoxton", street_address: "22 arundle avenue", rating: "4", user_id: user.id)
 
 
-flats = Flat.create(name: "Cool flat🏠",
+flats = Flat.create(name: "Feels like Home",
   user_id: user.id,
-  street_address: "Ealing",
-  description: "My Ealing Earl",
+  street_address: "601 Uxbridge Rd, Southall, Ealing, UB1 3HW",
+  description: "Situated in the heart of Ealing, our flat provides the connections with all your home comforts.  We head back to Exeter every weekend so it is always free! Message me to book.",
   capacity: 4
   # photo: cl_image_tag("", width: 400)
 )
@@ -43,10 +43,10 @@ file = URI.open("https://images.unsplash.com/photo-1581404635299-f473ede8699a?ix
 flats.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 flats.save!
 
-flats = Flat.create(name: "Expensive flat 🤑",
+flats = Flat.create(name: "Bachelor Pad",
   user_id: user.id,
-  street_address: "Kingston",
-  description: "My Kingston commode",
+  street_address: "112 High Street Kensington, London, W8 4SN",
+  description: "Bring your boys for a weekend in London, cold beers in the fridge 🍻",
   capacity: 1
 )
 #Kingston Photos
@@ -68,10 +68,10 @@ flats.save!
 # flats.save!
 
 
-flats = Flat.create(name: "My Shoreditch shwanky flat 👍",
+flats = Flat.create(name: "Stylish in Shoreditch",
   user_id: user.id,
-  street_address: "Shoreditch",
-  description: "so edgy",
+  street_address: "1 Brick Lane, Shoreditch, N1 5HN",
+  description: "A great location for anyone working in the City or for those looking to sight-see, with Brick Lane and Columbia Road Flower Market nearby.",
   capacity: 8
 )
 
