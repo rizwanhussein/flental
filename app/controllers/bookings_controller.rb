@@ -18,7 +18,9 @@ class BookingsController < ApplicationController
     @booking.flat = @flat
     @booking.user = current_user
     if @booking.save
+
       redirect_to flats_path
+
     else
       render "bookings/new", status: :unprocessable_entity
     end

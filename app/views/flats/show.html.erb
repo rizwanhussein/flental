@@ -17,6 +17,10 @@ YOU CAN EDIT DELETE BOOK OR GO BACK  %>
           <%= link_to "back to index", root_path %>
         </div>
         <div class="col-3 btn-flat">
+        <h3><%= @flat.description %></h3>
+      </div>
+     
+
           <%= simple_form_for @flat, method: :delete do |f| %>
           <%= f.button :submit, 'Delete' %>
           <% end %>
