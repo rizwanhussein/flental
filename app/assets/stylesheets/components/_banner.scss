@@ -10,11 +10,21 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
+  margin-left: 10px;
+  font-size: 90px;
+  letter-spacing: 15px;
 }
 
 .banner p {
   font-size: 20px;
   color: white;
-  opacity: .7;
+  opacity: .9;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  margin-left: 10px;
+  padding-bottom: 20px;
+}
+
+.banner .btn-flat {
+  margin-left: 10px;
+  margin-top: 40px;
 }
