@@ -1,31 +1,36 @@
+<%#
+  <body class="p-3 m-0 border-0 bd-example"> %>
 
-  <body class="p-3 m-0 border-0 bd-example">
+<div class="container">
 
-    <!-- Example Code -->
-    <div class="container">
-    <div class="align-center">
+  <div class="title">
     <h1 class="title">F L E N T A L<h1>
-    </div>
-      <div class="container">
-        <div class="flex-box">
-        <h3>Rent a flat or rent your flat in London!</h3>
+  </div>
 
-          <div class="host-text">
-          <p>Have you ever wondered what your flat does when you go back home for the weekend?
-          Why not make money from your flat by renting it when you're not there? </p>
+  <div class="flex-box">
+    <h3>Rent a flat or rent your flat in London!</h3>
 
-          <div class="rent-text">
-          <p>Have you ever visited London and wanted to stay in a fitted and kitted out just how you like it in your favourite part of London
-          While you're visiting London for the weekend why not stay in a swanky space
-          </p>
-          </div>
-
-          <div class="rent-and-host-text">
-          <h3>Flental brings together trusted hosts and hostees </h3>
-          </div>
-        </div>
+    <div class="row">
+      <div class="col-sm-6 host-text">
+        <p>Have you ever wondered what your flat does when you go back home for the weekend?
+        <br>Use Flental to make money from renting your flat while you're away! </p>
       </div>
-  </head>
+
+      <div class="col-sm-6 rent-text">
+        <p>Have you ever visited London and wanted to stay in a fitted and kitted out just how you like it?
+          <br>While you're visiting London for the weekend why not stay in a swanky space!
+        </p>
+      </div>
+    </div>
+    <div class="rent-and-host-text">
+      <h3>Flental brings together trusted hosts and hostees </h3>
+    </div>
+
+    <%= link_to "Discover", flats_path %>
+  </div>
+</div>
+
+
 
     <div class="container">
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -49,7 +54,3 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-
-  </body>
-  <%= link_to "Discover", flats_path %>
-</html>
