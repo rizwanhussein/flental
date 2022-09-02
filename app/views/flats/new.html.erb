@@ -1,18 +1,26 @@
-<div class="container">
-  <div class="host-form">
-    <h1>Become a host...</h1>
-    <%= simple_form_for @flat do |f| %>
-    <div class="form-inputs">
-      <%= f.input :name, placeholder: "e.g The Bachelor Pad" %>
-      <%= f.input :street_address %>
-      <%= f.input :description, placeholder: "Pink, fluffy and secluded" %>
-      <%= f.input :capacity, collection: 1..10 %>
-      <%= f.input :photo, as: :file %>
-    </div>
 
-    <div class="form-actions">
-      <%= f.button :submit, "Start hosting", class: "btn btn-flat" %>
+<div class="container">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1661796428215-04fc2830aae6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1588&q=80.jgp);">
+    <div class="container">
+      <h1 id="title">F L E N T A L</h1>
+      <p>London flat rental made easy</p>
     </div>
-      <% end %>
+  </div>
+
+  <div class="form">
+    <%= simple_form_for @flat do |f| %>
+
+      <h3>Add your title</h3>
+      <%= f.input_field :name, placeholder: "The fantastic flat" %>
+
+
+      <h3>Where is your flat?</h3>
+      <%= f.input_field :street_address, placeholder: "Croydon, CR0 2LG" %>
+
+      <h3>Add your unfiltered flat selfies 🤳</h3>
+      <%= f.input :photo, as: :file %>
+
+      <%= f.button :submit %>
+    <% end %>
   </div>
 </div>
