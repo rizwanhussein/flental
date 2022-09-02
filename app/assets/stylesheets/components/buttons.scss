@@ -1,23 +1,24 @@
 // button for the banner
 // font colours
-// dark purple 420039
-// lighter purp 932F6D
-// orchid E07BE0
-//
+// dark pink #
+// lighter pink #c3005c
+// lighter #ff6499
+// this is the old purple just in case #932F6D;
 
 
 .btn-flat {
   color: white;
   padding: 8px 24px;
   border-radius: 7px;
-  background: #932F6D;
+  letter-spacing: 1px;
+  background: #6e0037;
   transition: 0.3s ease;
   margin: auto;
 
 }
 
 .btn-flat:hover {
-  background: #932F6D;
+  background: #ff6499;
   letter-spacing: 1px;
   text-decoration: none;
   color:white;
