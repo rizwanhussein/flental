@@ -10,21 +10,22 @@ YOU CAN EDIT DELETE BOOK OR GO BACK  %>
       </div>
 
       <div class="row">
-        <h3><%= @flat.description %></h3>
-      </div>
-      <div class="row">
         <div class="col-3 btn-flat">
           <%= link_to "Book Now", new_flat_booking_path(@flat) %>
         </div>
-        <div class="col-3 btn btn-light">
+        <div class="col-3 btn-flat">
           <%= link_to "back to index", root_path %>
         </div>
-        <div class="col-3 btn btn-light">
+        <div class="col-3 btn-flat">
+        <h3><%= @flat.description %></h3>
+      </div>
+     
+
           <%= simple_form_for @flat, method: :delete do |f| %>
           <%= f.button :submit, 'Delete' %>
           <% end %>
         </div>
-        <div class="col-3 btn btn-light">
+        <div class="col-3 btn-flat">
           <%= link_to "edit booking", edit_flat_path %>
         </div>
       </div>

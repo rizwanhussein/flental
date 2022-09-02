@@ -1,6 +1,10 @@
 class BookingsController < ApplicationController
-  def index
+  def show_one
     @bookings = Booking.where(user: current_user)
+  end
+
+  def index
+    @bookings = Booking.all
   end
 
   def new
@@ -13,11 +17,12 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.flat = @flat
     @booking.user = current_user
-
     if @booking.save
-      redirect_to booking_confirm_path
+
+      redirect_to flats_path
+
     else
-      render "flats/show", status: :unprocessable_entity
+      render "bookings/new", status: :unprocessable_entity
     end
   end
  def bookingconfirm

@@ -68,6 +68,13 @@ flats.save!
 # flats.save!
 
 
+# )
+# #Shepherd Bush Photos
+# file = URI.open(" https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80")
+# flats.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+# flats.save!
+
+
 flats = Flat.create(name: "Stylish in Shoreditch",
   user_id: user.id,
   street_address: "1 Brick Lane, Shoreditch, N1 5HN",
@@ -77,7 +84,9 @@ flats = Flat.create(name: "Stylish in Shoreditch",
 
 #Shoreditch Photos
 file = URI.open("https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80")
-flats.photo.attach(io: file, filename: "nes.png", content_type: "image/png" )
+
+flats.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+
 flats.save!
 
 # puts "Creating flats"
