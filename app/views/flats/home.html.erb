@@ -1,45 +1,60 @@
+<%#
+  <body class="p-3 m-0 border-0 bd-example"> %>
 
-  <body class="p-3 m-0 border-0 bd-example">
+<div class="container">
 
-    <!-- Example Code -->
-    <div class="container">
-    <div class="align-center">
-     <h1> Flental <h1>
-       </div>
-     <div class="container">
-      <div class="flex-box">
-      <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-      fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-      <p>
-
-        </div>
+<%# THIS IS THE TITLE AND A BIT ABOUT AND A DISCOVER MORE BUTTON %>
+  <div class="flex-box">
+    <div class="row">
+      <h1 class="title">FLENTAL<h1>
     </div>
-  </head>
-    <div class="container">
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item">
-          <img src="https://images.unsplash.com/photo-1661916123448-116815d2f40b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1288&q=80" class="d-block w-100" style="height: 700px" alt="...">
-        </div>
-        <div class="carousel-item active">
-          <img src="https://images.unsplash.com/photo-1661916123448-116815d2f40b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1288&q=80" class="d-block w-100" style="height: 700px" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="https://images.unsplash.com/photo-1451153378752-16ef2b36ad05?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2067&q=80" class="d-blockw-100" style="height: 700px" alt="flats">
-        </div>
+
+    <div class="row">
+    <h3>Rent a flat or rent your flat in London!</h3>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6 host-text">
+        <p>Have you ever wondered what your flat does when you go back home for the weekend?
+        <br>Use Flental to make money from renting your flat while you're away! </p>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+
+      <div class="col-sm-6 rent-text">
+        <p>Have you ever visited London and wanted to stay in a fitted and kitted out just how you like it?
+          <br>While you're visiting London for the weekend why not stay in a swanky space!
+        </p>
+      </div>
     </div>
 
-  </body>
-  <%= link_to "Discover", flats_path %>
-</html>
+    <div class="row">
+      <h3>Flental brings together trusted hosts and hostees </h3>
+    </div>
+
+    <%= link_to "Discover", flats_path %>
+  </div>
+
+  <%# THIS IS THE CAROSEL OF IMAGES %>
+
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1661916123448-116815d2f40b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1288&q=80" class="d-block w-100" style="height: 700px" alt="...">
+      </div>
+      <div class="carousel-item active">
+        <img src="https://images.unsplash.com/photo-1661916123448-116815d2f40b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1288&q=80" class="d-block w-100" style="height: 700px" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1451153378752-16ef2b36ad05?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2067&q=80" class="d-blockw-100" style="height: 700px" alt="flats">
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>

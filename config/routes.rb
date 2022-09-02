@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   resources :bookings, only: :index
 
   get "/action", to: "flats#action"
-  get "/update", to: "flats#update"
-  # get "flats/:id/edit", to: "flats#edit"
+
+  get "/booking/confirm", to: "bookings#bookingconfirm"
 end
