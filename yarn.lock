@@ -28,7 +28,7 @@
   resolved "https://registry.npmjs.org/@discoveryjs/json-ext/-/json-ext-0.5.7.tgz"
   integrity sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==
 
-"@hotwired/stimulus-webpack-helpers@^1.0.1":
+"@hotwired/stimulus-webpack-helpers@^1.0.0", "@hotwired/stimulus-webpack-helpers@^1.0.1":
   version "1.0.1"
   resolved "https://registry.npmjs.org/@hotwired/stimulus-webpack-helpers/-/stimulus-webpack-helpers-1.0.1.tgz"
   integrity sha512-wa/zupVG0eWxRYJjC1IiPBdt3Lruv0RqGN+/DTMmUWUyMAEB27KXmVY6a8YpUVTM7QwVuaLNGW4EqDgrS2upXQ==
@@ -1293,6 +1293,14 @@ spdx-license-ids@^3.0.0:
   version "3.0.12"
   resolved "https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.12.tgz"
   integrity sha512-rr+VVSXtRhO4OHbXUiAF7xW3Bo9DuuF6C5jH+q/x15j2jniycgKbxU09Hr0WqlSLUs4i4ltHGXqTe7VHclYWyA==
+
+stimulus@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/stimulus/-/stimulus-3.1.0.tgz#225298f1936f96b0eafa883b8b304266427912c3"
+  integrity sha512-ln+BtLkhemwJozr5N3I5q0kGlSv6fmcPi3JtDjBo7gnnz2tAYhK2WBhyY/EN/4+CWIwqp3qPm3Pc+i9CjIXrtg==
+  dependencies:
+    "@hotwired/stimulus" "^3.1.0"
+    "@hotwired/stimulus-webpack-helpers" "^1.0.0"
 
 strip-indent@^3.0.0:
   version "3.0.0"
