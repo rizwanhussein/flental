@@ -27,7 +27,7 @@ AND IT HAS A MAP FUNCTION DISPLAYING THE FLATS %>
 <div class="container">
   <div class="cards">
     <% @flats.each do |flat| %>
-    <%= link_to flat_path(flat) do %>
+    <%= link_to flat_path(flat), class: "text-decoration-none" do %>
       <div class="card">
         <% if flat.photo.attached? %>
         <%= cl_image_tag flat.photo.key, width: 400, height: 300, crop: :fill, class: "card-img" %>

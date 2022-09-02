@@ -1,6 +1,6 @@
-.cards{
-  // border: 6px solid black;
-
+.card{
+  border: 6px solid black;
+  text-decoration: none;
 }
 .card-infos h2 {
   margin: 10px;
@@ -9,6 +9,8 @@
   font-family:'Times New Roman', Times, serif
 
 }
+
+
 
 .card-infos{
   padding: 10px;
