@@ -7,7 +7,7 @@ IT IS SHOWING ALL THE FLATS
 AND IT HAS A MAP FUNCTION DISPLAYING THE FLATS %>
 
 
-<%= form_with url: flats_path, method: :get, class: "d-flex my-3" do %>
+<%= form_with url: flats_path, method: :get, class: "d-flex my-3 mx-2" do %>
   <%= text_field_tag :query,
     params[:query],
     class: "form-control",
@@ -36,7 +36,7 @@ AND IT HAS A MAP FUNCTION DISPLAYING THE FLATS %>
           <div class="card-infos">
             <div>
               <h2><%= flat.name %></h2>
-              <p><%= flat.street_address %></p>
+              <p class="address"><%= flat.street_address %></p>
               <p><%= flat.description %></p>
             </div>
             <h2 class="card-pricing">£100</h2>
