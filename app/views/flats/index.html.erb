@@ -1,6 +1,12 @@
-<%# SEARCH BAR %>
-<%# http request is going to the flats path so the info will go to
-the page we are already on %>
+
+<%# THIS PAGE IS THE HOME PAGE, IT SHOWS ALL THE FLATS
+IT HAS A SEARCH FUNCTION
+A BACKGROUND IMAGE WITH TITLE
+A BECOME A HOST BUTTON
+IT IS SHOWING ALL THE FLATS
+AND IT HAS A MAP FUNCTION DISPLAYING THE FLATS %>
+
+
 <%= form_with url: flats_path, method: :get, class: "d-flex my-3" do %>
   <%= text_field_tag :query,
     params[:query],
@@ -16,8 +22,6 @@ the page we are already on %>
   <p>Bringing together trusted hosts and hostees</p>
   <a class="btn-flat" <%= link_to "Become a host!", new_flat_path%>>
 </div>
-
-
 
 
 <div class="container">
