@@ -15,12 +15,17 @@ class BookingsController < ApplicationController
     @booking.user = current_user
 
     if @booking.save
-      redirect_to flat_path(@flat)
+      redirect_to booking_confirm_path
     else
       render "flats/show", status: :unprocessable_entity
     end
   end
+ def bookingconfirm
 
+ end
+  def show
+    @booking = User.find(params[:user_id]).bookings
+  end
 
   private
 
