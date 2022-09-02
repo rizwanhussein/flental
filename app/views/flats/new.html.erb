@@ -1,6 +1,5 @@
 
 <div class="container">
-
   <div class="host-form">
     <h1>BECOME A HOST...</h1>
     <%= simple_form_for @flat do |f| %>
@@ -11,26 +10,9 @@
       <%= f.input :capacity, collection: 1..10 %>
       <%= f.input :photo, as: :file %>
     </div>
-
     <div class="form-actions">
       <%= f.button :submit, "Start hosting", class: "btn-flat" %>
     </div>
-  </div>
-
-  <div class="form">
-    <%= simple_form_for @flat do |f| %>
-
-      <h3>Add your title</h3>
-      <%= f.input_field :name, placeholder: "The fantastic flat" %>
-
-
-      <h3>Where is your flat?</h3>
-      <%= f.input_field :street_address, placeholder: "Croydon, CR0 2LG" %>
-
-      <h3>Add your unfiltered flat selfies 🤳</h3>
-      <%= f.input :photo, as: :file %>
-
-      <%= f.button :submit %>
     <% end %>
   </div>
 </div>
