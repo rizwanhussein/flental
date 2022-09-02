@@ -45,7 +45,7 @@ class FlatsController < ApplicationController
 
   def update
     flat = Flat.find(params[:id])
-    flat.update(strong_params)
+    flat.update(flat_params)
     redirect_to flat_path(flat)
   end
 
@@ -55,10 +55,7 @@ class FlatsController < ApplicationController
     redirect_to root_path
   end
 
-  def another_action
-  end
-
-  def action
+  def update
   end
 
   private
